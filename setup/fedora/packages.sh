@@ -10,9 +10,8 @@ sudo dnf install -y fedora-workstation-repositories
 sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf distro-sync
 sudo dnf groupupdate -y core
-sudo dnf groupupdate -y --skip-broken multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate -y --best --allowerasing multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
 sudo dnf install -y openssl java-latest-openjdk-headless
-# sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 ## security
 # echo "Packages - Security"
@@ -38,7 +37,7 @@ sudo dnf install -y code
 
 ## utilities
 echo "Packages - Utilities"
-sudo dnf install -y neofetch unrar gnome-tweaks gnome-extensions-app
+sudo dnf install -y neofetch unrar gnome-tweaks
 
 ## themes
 echo "Packages - Themes"

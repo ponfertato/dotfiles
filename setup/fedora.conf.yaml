@@ -6,9 +6,6 @@
     shell:
       strerr: true
 
-- plugins:
-    - dotbot-flatpak
-
 - clean: ['~']
 
 - link:
@@ -24,27 +21,35 @@
 
 - flatpak:
     ## base
-    - Flatseal
-    - Thunderbird
+    - com.mattjakeman.ExtensionManager #Extension Manager
+    - com.github.tchx84.Flatseal #Flatseal
+    - org.mozilla.Thunderbird #Thunderbird
+    # - org.gnome.Extensions #Extensions
     ## communication
-    - Discord
-    # - Franz
-    - Telegram Desktop
+    - com.discordapp.Discord #Discord
+    - org.telegram.desktop #Telegram Desktop
+    # - com.meetfranz.Franz #Franz
     ## develop
-    - GitHub Desktop
-    - Obsidian
-    ## games
-    # - Heroic Games Launcher
-    # - Prism Launcher
-    # - ProtonUp-Qt
-    # - Steam
+    - io.github.shiftey.Desktop #GitHub Desktop
+    - md.obsidian.Obsidian #Obsidian
     ## office
-    - ONLYOFFICE Desktop Editors
-    - PDF Arranger
+    - org.onlyoffice.desktopeditors #ONLYOFFICE Desktop Editors
+    - com.github.jeromerobert.pdfarranger #PDF Arranger
     ## utilites
-    - KeePassXC
-    # - Remmina
-    - qBittorrent
+    - org.keepassxc.KeePassXC #KeePassXC
+    - org.remmina.Remmina #Remmina
+    - org.qbittorrent.qBittorrent #qBittorrent
+    ### home
+    ## games
+    # - com.heroicgameslauncher.hgl #Heroic Games Launcher
+    # - org.prismlauncher.PrismLauncher #Prism Launcher
+    # - net.davidotek.pupgui2 #ProtonUp-Qt
+    # - com.valvesoftware.Steam #Steam
+    ### work
+    ## communication
+    # - com.mattermost.Desktop #Mattermost
+    # - org.zulip.Zulip #Zulip
 
 - shell:
+  - [git submodule init, init git submodule]
   - [git submodule update --init --recursive, Installing submodules]
