@@ -1,0 +1,47 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      strerr: true
+
+- clean: ['~']
+
+- link:
+    ## ssh
+    ~/.ssh/config:
+        path: config/ssh/config
+        create: true
+    ## shell
+    ~/.oh-my-zsh: shell/zsh/ohmyzsh
+    ~/.zshrc: shell/zsh/zshrc
+    ## git
+    ~/.gitconfig: config/git/gitconfig
+
+- flatpak:
+    ## base
+    - Flatseal
+    - Thunderbird
+    ## communication
+    - Discord
+    # - Franz
+    - Telegram Desktop
+    ## develop
+    - GitHub Desktop
+    - Obsidian
+    ## games
+    # - Heroic Games Launcher
+    # - Prism Launcher
+    # - ProtonUp-Qt
+    # - Steam
+    ## office
+    - ONLYOFFICE Desktop Editors
+    - PDF Arranger
+    ## utilites
+    - KeePassXC
+    # - Remmina
+    - qBittorrent
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
