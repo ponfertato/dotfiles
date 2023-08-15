@@ -20,7 +20,11 @@ git config --global url."git@github.com:".insteadOf git://github.com/
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-. "${BASEDIR}/setup/fedora/packages.sh"
+. "${BASEDIR}/setup/fedora/develop.sh"
+. "${BASEDIR}/setup/fedora/security.sh"
+. "${BASEDIR}/setup/fedora/system.sh"
+. "${BASEDIR}/setup/fedora/themes.sh"
+. "${BASEDIR}/setup/fedora/utilities.sh"
 . "${BASEDIR}/setup/zsh.sh"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir "${PLUGIN}" -c "${CONFIG}" "${@}"
