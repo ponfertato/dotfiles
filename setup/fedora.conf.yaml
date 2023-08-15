@@ -6,6 +6,9 @@
     shell:
       strerr: true
 
+- plugins:
+    - dotbot-flatpak
+
 - clean: ['~']
 
 - link:
