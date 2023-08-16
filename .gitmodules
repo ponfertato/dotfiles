@@ -2,9 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "shell/zsh/ohmyzsh"]
-	path = shell/zsh/ohmyzsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule "dotbot-flathub"]
 	path = dotbot-flathub
 	url = https://github.com/potatoenergy/dotbot-flathub.git
