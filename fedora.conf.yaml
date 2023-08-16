@@ -11,13 +11,19 @@
 - link:
     ## ssh
     ~/.ssh/config:
-        path: config/ssh/config
+        path: ssh/config
         create: true
     ## shell
-    ~/.oh-my-zsh: shell/zsh/ohmyzsh
-    ~/.zshrc: shell/zsh/zshrc
+    ~/.oh-my-zsh: zsh/ohmyzsh
+    ~/.oh-my-zsh/custom/aliases.zsh:
+        path: zsh/aliases.zsh
+        create: true
+    ~/.oh-my-zsh/custom/functions.zsh:
+        path: zsh/functions.zsh
+        create: true
+    ~/.zshrc: zsh/zshrc
     ## git
-    ~/.gitconfig: config/git/gitconfig
+    ~/.gitconfig: git/gitconfig
 
 - flatpak:
     ## base

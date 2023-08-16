@@ -1,0 +1,7 @@
+Host "Local"
+  HostName 192.168.215.228
+  User SQUD
+
+Host "LasP"
+  HostName 109.173.102.51
+  User ponfertato

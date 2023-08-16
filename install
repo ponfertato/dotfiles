@@ -2,7 +2,7 @@
 
 set -e
 
-CONFIG="setup/fedora.conf.yaml"
+CONFIG="fedora.conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
@@ -20,7 +20,6 @@ git config --global url."git@github.com:".insteadOf git://github.com/
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-. "${BASEDIR}/setup/fedora/packages.sh"
-. "${BASEDIR}/setup/zsh.sh"
+. "${BASEDIR}/scripts/linux/fedora.sh"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir "${PLUGIN}" -c "${CONFIG}" "${@}"

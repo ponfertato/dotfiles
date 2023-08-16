@@ -99,9 +99,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-## Load functions
-# for f in $DOTFILES/shell/functions/*.functions.sh; do source $f; done
-
-# Load aliases
-for f in $DOTFILES/shell/aliases/*.aliases.sh; do source $f; done

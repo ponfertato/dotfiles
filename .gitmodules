@@ -5,3 +5,6 @@
 [submodule "dotbot-flathub"]
 	path = dotbot-flathub
 	url = https://github.com/potatoenergy/dotbot-flathub.git
+[submodule "zsh/ohmyzsh"]
+	path = zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
