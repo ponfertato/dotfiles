@@ -38,6 +38,7 @@ install_or_update_packages() {
 }
 
 while true; do
+	clear
 	execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora"
 	read -p "Базовая настройка завершена, нажмите Enter, чтобы продолжить..."
 
