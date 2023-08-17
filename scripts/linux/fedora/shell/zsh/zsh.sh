@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-print_block "Fedora - Zsh"
+print_block "Fedora - Shell/Zsh"
 
 set -e
 

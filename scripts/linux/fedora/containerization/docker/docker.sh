@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-print_block "Fedora - Docker"
+print_block "Fedora - Containerization/Docker"
 
 if [ ! -f /etc/yum.repos.d/docker-ce.repo ]; then
     echo "Создается файл репозитория для Docker..."
