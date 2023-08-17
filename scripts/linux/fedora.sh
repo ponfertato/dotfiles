@@ -41,7 +41,6 @@ while true; do
 	clear
 	execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora"
 	read -p "Базовая настройка завершена, нажмите Enter, чтобы продолжить..."
-
 	clear
 	echo "Выберите установки (цифры можно перечислить через пробел):"
 	echo "1. Установки для Docker"
@@ -117,6 +116,7 @@ while true; do
 			echo "- $option"
 		done
 		read -p "Дополнительная настройка завершена, нажмите Enter, чтобы продолжить..."
+		clear
 		break
 	fi
 done
