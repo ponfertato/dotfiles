@@ -50,8 +50,8 @@ while true; do
 	echo "4. Установки для редакторов"
 	echo "5. Установки для расширений"
 	echo "6. Установки для игр"
-	echo "7. Установки для ядра Xanmod"
-	echo "8. Установки для ядра Fsync"
+	echo "7. Установки для ядра Fsync"
+	echo "8. Установки для ядра Xanmod"
 	echo "9. Установки для оболочки"
 	echo "0. Только применение конфига fedora.conf"
 
@@ -86,11 +86,11 @@ while true; do
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/games"
 				;;
 			7)
-				selected_options+=("Установки для ядра Xanmod")
+				selected_options+=("Установки для ядра Fsync")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/fsync"
 				;;
 			8)
-				selected_options+=("Установки для ядра Fsync")
+				selected_options+=("Установки для ядра Xanmod")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/xanmod"
 				;;
 			9)
