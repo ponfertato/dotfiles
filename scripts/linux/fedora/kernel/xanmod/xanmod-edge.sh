@@ -7,7 +7,7 @@ if dnf repolist | grep -q "sentry/kernel-fsync"; then
 fi
 
 if ! dnf repolist | grep -q "rmnscnce/kernel-xanmod"; then
-    sudo dnf copr enable rmnscnce/kernel-xanmod
+    sudo dnf copr enable rmnscnce/kernel-xanmod --accept
 fi
 
 packages=(
