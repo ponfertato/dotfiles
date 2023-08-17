@@ -46,75 +46,77 @@ while true; do
 	echo "Выберите установки (цифры можно перечислить через пробел):"
 	echo "1. Установки для Docker"
 	echo "2. Установки для Podman"
-	echo "3. Установки для редакторов"
-	echo "4. Установки для расширений"
-	echo "5. Установки для игр"
-	echo "6. Установки для ядра Xanmod"
-	echo "7. Установки для ядра Fsync"
-	echo "8. Установки для оболочки"
-	echo "9. Установки для тем"
+	echo "3. Установки для персонализации"
+	echo "4. Установки для редакторов"
+	echo "5. Установки для расширений"
+	echo "6. Установки для игр"
+	echo "7. Установки для ядра Xanmod"
+	echo "8. Установки для ядра Fsync"
+	echo "9. Установки для оболочки"
 	echo "0. Только применение конфига fedora.conf"
 
-	read -a choices -p "Введите номера через пробел: "
+	read -ra choices -p "Введите номера через пробел: "
 
 	selected_options=()
 
-	case $choices in
-		*1*)
-			selected_options+=("Установки для Docker")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/containerization/docker"
-			;;
-		*2*)
-			selected_options+=("Установки для Podman")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/containerization/podman"
-			;;
-		*3*)
-			selected_options+=("Установки для редакторов")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/editors"
-			;;
-		*4*)
-			selected_options+=("Установки для расширений")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/extention"
-			;;
-		*5*)
-			selected_options+=("Установки для игр")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/games"
-			;;
-		*6*)
-			selected_options+=("Установки для ядра Xanmod")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/fsync"
-			;;
-		*7*)
-			selected_options+=("Установки для ядра Fsync")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/xanmod"
-			;;
-		*8*)
-			selected_options+=("Установки для оболочки")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/shell/zsh"
-			;;
-		*9*)
-			selected_options+=("Установки для тем")
-			execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/themes"
-			;;
-		0)
-			echo "Применение конфига fedora.conf"
-			break
-			;;
-		*)
-			clear
-			echo "Неверный выбор. Пожалуйста, попробуйте еще раз."
-			sleep 2
-			clear
-			continue
-			;;
-	esac
+	for choice in "${choices[@]}"; do
+		case $choice in
+			1)
+				selected_options+=("Установки для Docker")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/containerization/docker"
+				;;
+			2)
+				selected_options+=("Установки для Podman")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/containerization/podman"
+				;;
+			3)
+				selected_options+=("Установки для персонализации")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/customization"
+				;;
+			4)
+				selected_options+=("Установки для редакторов")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/editors"
+				;;
+			5)
+				selected_options+=("Установки для расширений")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/extention"
+				;;
+			6)
+				selected_options+=("Установки для игр")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/games"
+				;;
+			7)
+				selected_options+=("Установки для ядра Xanmod")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/fsync"
+				;;
+			8)
+				selected_options+=("Установки для ядра Fsync")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/xanmod"
+				;;
+			9)
+				selected_options+=("Установки для оболочки")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/shell/zsh"
+				;;
+			0)
+				selected_options+=("Применение конфига fedora.conf")
+				break
+				;;
+			*)
+				clear
+				echo "Неверный выбор. Пожалуйста, попробуйте еще раз."
+				sleep 2
+				clear
+				continue
+				;;
+		esac
+	done
 
 	if [ ${#selected_options[@]} -gt 0 ]; then
 		echo "Выбранные варианты:"
 		for option in "${selected_options[@]}"; do
 			echo "- $option"
-			done
-	read -p "Дополнительная настройка завершена, нажмите Enter, чтобы продолжить..."
+		done
+		read -p "Дополнительная настройка завершена, нажмите Enter, чтобы продолжить..."
 		break
 	fi
 done
