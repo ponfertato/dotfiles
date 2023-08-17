@@ -10,7 +10,4 @@ if ! dnf repolist | grep -q "sentry/kernel-fsync"; then
     yes | sudo dnf copr enable sentry/kernel-fsync
 fi
 
-packages=(
-	kernel-fsync
-)
-install_or_update_packages
+sudo dnf update --refresh

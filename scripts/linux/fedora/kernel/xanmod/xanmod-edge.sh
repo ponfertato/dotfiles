@@ -10,6 +10,8 @@ if ! dnf repolist | grep -q "sentry/kernel-fsync"; then
     yes | sudo dnf copr enable sentry/kernel-fsync
 fi
 
+sudo dnf update --refresh
+
 packages=(
 	kernel-xanmod-edge
 )
