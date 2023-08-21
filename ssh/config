@@ -1,11 +1,14 @@
 Host "Local Server"
   HostName 192.168.215.228
   User SCUD
+  Port 22
 
 Host "LasP Server"
-  HostName 109.173.102.51
+  HostName laspegasus.ru
   User ponfertato
+  Port 22
 
 Host "PaladinBeatsProduction Server"
-  HostName 188.32.246.46
+  HostName paladinbeatsproduction.com
   User ponfertato
+  Port 22
