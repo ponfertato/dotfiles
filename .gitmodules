@@ -8,3 +8,6 @@
 [submodule "zsh/ohmyzsh"]
 	path = zsh/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "nvim/astronvim"]
+	path = nvim/astronvim
+	url = https://github.com/AstroNvim/AstroNvim.git

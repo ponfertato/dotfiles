@@ -22,6 +22,9 @@
         path: zsh/functions.zsh
         create: true
     ~/.zshrc: zsh/zshrc
+    ## nvim
+    ~/.config/nvim: nvim/astronvim
+    ~/.config/nvim/lua/user: nvim/astronvim_config
     ## git
     ~/.gitconfig: git/gitconfig
 
