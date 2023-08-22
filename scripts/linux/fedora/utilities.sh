@@ -4,11 +4,12 @@ print_block "Fedora - Utilities"
 
 packages=(
 	conky
+	gnome-tweaks
 	java-latest-openjdk-headless
 	neofetch
-	python3
+	nodejs
 	openssl
+	python3
 	unrar
-	gnome-tweaks
 )
 install_or_update_packages
