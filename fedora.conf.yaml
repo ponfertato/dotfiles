@@ -9,11 +9,16 @@
 - clean: ['~']
 
 - link:
+    ## conky
+    ~/.conkyrc: conky/conkyrc
     ## ssh
     ~/.ssh/config:
         path: ssh/config
         create: true
     ## shell
+    ### bash
+    ~/.bashrc: bash/bashrc
+    ### zsh
     ~/.oh-my-zsh: zsh/ohmyzsh
     ~/.oh-my-zsh/custom/aliases.zsh:
         path: zsh/aliases.zsh
