@@ -27,6 +27,10 @@
     ~/.config/nvim/lua/user: nvim/astronvim_config
     ## git
     ~/.gitconfig: git/gitconfig
+    ## gnome
+    ### files
+    ~/.config/gtk-3.0/bookmarks: gnome/files/bookmarks
+    # ~/.config/gtk-4.0/servers: gnome/files/servers
 
 - flatpak:
     ## base
