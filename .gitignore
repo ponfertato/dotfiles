@@ -4,5 +4,3 @@
 dotbot-flathub/__pycache__/
 *.py[cod]
 *$py.class
-
-nvim/astronvim/lua/user

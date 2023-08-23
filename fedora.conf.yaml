@@ -28,8 +28,8 @@
         create: true
     ~/.zshrc: zsh/zshrc
     ## nvim
-    ~/.config/nvim: nvim/astronvim
-    ~/.config/nvim/lua/user: nvim/astronvim_config
+    ~/.config/nvim: nvim/nvchad
+    ~/.config/nvim/lua/custom: nvim/nvchad_custom
     ## git
     ~/.gitconfig: git/gitconfig
     ## gnome
