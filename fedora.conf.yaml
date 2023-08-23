@@ -69,5 +69,4 @@
     # - org.zulip.Zulip #Zulip
 
 - shell:
-  - [git submodule init, init git submodule]
   - [git submodule update --init --recursive, Installing submodules]
