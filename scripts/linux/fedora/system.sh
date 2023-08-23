@@ -3,30 +3,30 @@
 print_block "Fedora - System"
 
 if ! grep -q "defaultyes=True" /etc/dnf/dnf.conf; then
-    echo "Добавление параметра defaultyes в файл dnf.conf..."
-  sudo sh -c 'echo "defaultyes=True" >> /etc/dnf/dnf.conf'
+	echo "Добавление параметра defaultyes в файл dnf.conf..."
+	sudo sh -c 'echo "defaultyes=True" >> /etc/dnf/dnf.conf'
 fi
 if ! grep -q "fastestmirror=True" /etc/dnf/dnf.conf; then
-    echo "Добавление параметра fastestmirror в файл dnf.conf..."
-  sudo sh -c 'echo "fastestmirror=True" >> /etc/dnf/dnf.conf'
+	echo "Добавление параметра fastestmirror в файл dnf.conf..."
+	sudo sh -c 'echo "fastestmirror=True" >> /etc/dnf/dnf.conf'
 fi
 if ! grep -q "keepcache=True" /etc/dnf/dnf.conf; then
-    echo "Добавление параметра keepcache в файл dnf.conf..."
-  sudo sh -c 'echo "keepcache=True" >> /etc/dnf/dnf.conf'
+	echo "Добавление параметра keepcache в файл dnf.conf..."
+	sudo sh -c 'echo "keepcache=True" >> /etc/dnf/dnf.conf'
 fi
 if ! grep -q "max_parallel_downloads=10" /etc/dnf/dnf.conf; then
-    echo "Добавление параметра max_parallel_downloads в файл dnf.conf..."
-  sudo sh -c 'echo "max_parallel_downloads=10" >> /etc/dnf/dnf.conf'
+	echo "Добавление параметра max_parallel_downloads в файл dnf.conf..."
+	sudo sh -c 'echo "max_parallel_downloads=10" >> /etc/dnf/dnf.conf'
 fi
 
 if ! rpm -q fedora-workstation-repositories &> /dev/null; then
-    echo "Установка fedora-workstation-repositories..."
-    sudo dnf -y install fedora-workstation-repositories
+	echo "Установка fedora-workstation-repositories..."
+	sudo dnf -y install fedora-workstation-repositories
 fi
 
 if ! rpm -q rpmfusion-free-release &> /dev/null || ! rpm -q rpmfusion-nonfree-release &> /dev/null; then
-    echo "Установка rpmfusion репозиториев..."
-    sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+	echo "Установка rpmfusion репозиториев..."
+	sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 fi
 
 echo "Выполняется обновление системы..."
