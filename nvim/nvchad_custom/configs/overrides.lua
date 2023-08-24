@@ -7,9 +7,9 @@ M.treesitter = {
     "html",
     "css",
     "javascript",
-    "typescript",
+    "astro",
     "tsx",
-    "c",
+    "typescript",
     "markdown",
     "markdown_inline",
   },
@@ -30,9 +30,13 @@ M.mason = {
     -- web dev stuff
     "css-lsp",
     "html-lsp",
+    "astro-language-server",
+    "tailwindcss-language-server",
     "typescript-language-server",
     "deno",
     "prettier",
+    "json-lsp",
+    "marksman",
 
     -- c/cpp stuff
     "clangd",
@@ -42,6 +46,10 @@ M.mason = {
 
 -- git support in nvimtree
 M.nvimtree = {
+  filters = {
+    dotfiles = true,
+    custom = { "node_modules" },
+  },
   git = {
     enable = true,
   },
@@ -56,23 +64,14 @@ M.nvimtree = {
   },
 }
 
-M.presence = {
-  auto_update         = true,
-  neovim_image_text   = "How do I exit it?",
-  main_image          = "file",
-  log_level           = "debug",
-  debounce_timeout    = 10,
-  enable_line_number  = false,
-  buttons             = true,
-  show_time           = true,
-  -- Rich Presence text options
-  editing_text        = "Editing %s",
-  file_explorer_text  = "Browsing %s",
-  git_commit_text     = "Committing changes",
-  plugin_manager_text = "Managing plugins",
-  reading_text        = "Reading %s",
-  workspace_text      = "Working on %s",
-  line_number_text    = "Line %s out of %s"
+M.cmp = {
+  sources = {
+    name = "nvim_lsp",
+    priority = 10,
+    keyword_length = 6,
+    group_index = 1,
+    max_item_count = 15,
+  },
 }
 
 return M
