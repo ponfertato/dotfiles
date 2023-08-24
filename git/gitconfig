@@ -8,3 +8,5 @@
 	email = ponfertato@ya.ru
 [url "git@github.com:"]
 	insteadOf = git://github.com/
+[gui]
+	recentrepo = /home/ponfertato/Документы/GitHub/dotfiles
