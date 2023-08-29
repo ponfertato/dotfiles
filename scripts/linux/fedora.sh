@@ -46,12 +46,13 @@ while true; do
 	echo "1. Установки для Docker"
 	echo "2. Установки для Podman"
 	echo "3. Установки для персонализации"
-	echo "4. Установки для редакторов"
-	echo "5. Установки для расширений"
-	echo "6. Установки для игр"
-	echo "7. Установки для ядра Fsync"
-	echo "8. Установки для ядра Xanmod"
-	echo "9. Установки для оболочки"
+	echo "4. Установки для Neovim"
+	echo "5. Установки для Visual Studio Code"
+	echo "6. Установки для расширений"
+	echo "7. Установки для игр"
+	echo "8. Установки для ядра Fsync"
+	echo "9. Установки для ядра Xanmod"
+	echo "10. Установки для оболочки"
 	echo "0. Только применение конфига fedora.conf"
 
 	read -ra choices -p "Введите номера через пробел: "
@@ -73,26 +74,30 @@ while true; do
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/customization"
 				;;
 			4)
-				selected_options+=("Установки для редакторов")
-				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/editors"
+				selected_options+=("Установки для Neovim")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/editors/nvim"
 				;;
 			5)
+				selected_options+=("Установки для Visual Studio Code")
+				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/editors/vscode"
+				;;
+			6)
 				selected_options+=("Установки для расширений")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/extention"
 				;;
-			6)
+			7)
 				selected_options+=("Установки для игр")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/games"
 				;;
-			7)
+			8)
 				selected_options+=("Установки для ядра Fsync")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/fsync"
 				;;
-			8)
+			9)
 				selected_options+=("Установки для ядра Xanmod")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/xanmod"
 				;;
-			9)
+			10)
 				selected_options+=("Установки для оболочки")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/shell/zsh"
 				;;
