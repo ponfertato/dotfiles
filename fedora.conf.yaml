@@ -44,25 +44,30 @@
     - org.mozilla.Thunderbird #Thunderbird
     # - org.gnome.Extensions #Extensions
     ## communication
-    - com.discordapp.Discord #Discord
-    - org.telegram.desktop #Telegram Desktop
-    # - com.meetfranz.Franz #Franz
+    - com.obsproject.Studio #OBS Studio
+    - io.github.kotatogram #Kotatogram Desktop
+    - xyz.armcord.ArmCord #ArmCord
+    # - com.discordapp.Discord #Discord
+    # - org.telegram.desktop #Telegram Desktop
     ## develop
-    - io.github.shiftey.Desktop #GitHub Desktop
+    - com.github.Murmele.Gittyup #Gittyup
+    - dev.pulsar_edit.Pulsar #Pulsar
     - md.obsidian.Obsidian #Obsidian
     ## office
     - org.onlyoffice.desktopeditors #ONLYOFFICE Desktop Editors
     - com.github.jeromerobert.pdfarranger #PDF Arranger
     ## utilites
+    - org.bleachbit.BleachBit #BleachBit
     - org.keepassxc.KeePassXC #KeePassXC
-    - org.remmina.Remmina #Remmina
     - org.qbittorrent.qBittorrent #qBittorrent
+    - org.remmina.Remmina #Remmina
     ### home
     ## games
     # - com.heroicgameslauncher.hgl #Heroic Games Launcher
-    # - org.prismlauncher.PrismLauncher #Prism Launcher
-    # - net.davidotek.pupgui2 #ProtonUp-Qt
     # - com.valvesoftware.Steam #Steam
+    # - io.github.Foldex.AdwSteamGtk #AdwSteamGtk
+    # - net.davidotek.pupgui2 #ProtonUp-Qt
+    # - org.prismlauncher.PrismLauncher #Prism Launcher
     ### work
     ## communication
     # - com.mattermost.Desktop #Mattermost
