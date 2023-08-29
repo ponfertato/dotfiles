@@ -4,7 +4,7 @@ print_block "Fedora - Utilities"
 
 packages=(
 	conky
-	git-all
+	git
 	gnome-tweaks
 	java-latest-openjdk-headless
 	neofetch
