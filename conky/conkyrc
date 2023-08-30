@@ -1,77 +1,89 @@
--- Conky, a system monitor https://github.com/brndnmtthws/conky
---
--- This configuration file is Lua code. You can write code in here, and it will
--- execute when Conky loads. You can use it to generate your own advanced
--- configurations.
---
--- Try this (remove the `--`):
---
---   print("Loading Conky config")
---
--- For more on Lua, see:
--- https://www.lua.org/pil/contents.html
+--[[
+-- Potato Conky
+--]]
 
 conky.config = {
-	alignment = 'top_right',
-	background = false,
-	border_width = 1,
-	cpu_avg_samples = 2,
-	default_color = 'white',
-	default_outline_color = 'white',
-	default_shade_color = 'white',
-	double_buffer = true,
-	draw_borders = false,
-	draw_graph_borders = true,
-	draw_outline = false,
-	draw_shades = false,
-	extra_newline = false,
-	font = 'DejaVu Sans Mono:size=12',
-	gap_x = 60,
-	gap_y = 60,
-	minimum_height = 5,
-	minimum_width = 5,
-	net_avg_samples = 2,
-	no_buffers = true,
-	out_to_console = false,
-	out_to_ncurses = false,
-	out_to_stderr = false,
-	out_to_x = true,
-	own_window = true,
-	own_window_class = 'Conky',
-	own_window_type = 'desktop',
-	show_graph_range = false,
-	show_graph_scale = false,
-	stippled_borders = 0,
-	update_interval = 1.0,
-	uppercase = false,
-	use_spacer = 'none',
-	use_xft = true,
-	-- ponfertato edit
-	own_window_argb_visual = true,
-	own_window_colour = '171717',
-	own_window_argb_value = 150,
-	--double_buffer = true,
+    use_xft = true,
+    xftalpha = .8,
+    update_interval = 30.0,
+    override_utf8_locale = true,
+    font = 'Cantarell:size=12',
+    text_buffer_size = 8000,
+    background = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 90,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_transparent = false,
+    own_window_type = 'desktop',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_colour = '000000',
+    minimum_height = 0,
+    minimum_width = 200,
+    maximum_width = 300,
+    gap_x = 15,
+    gap_y = 50,
+    alignment = 'top_right',
+    use_spacer = 'none',
+    draw_shades = true,
+    draw_outline = false,
+    draw_borders = false,
+    stippled_borders = 0,
+    border_width = 1,
+    double_buffer = true,
+    no_buffers = false,
+    uppercase = true,
+    cpu_avg_samples = 2,
+    top_cpu_separate = false,
+    net_avg_samples = 2,
+    temperature_unit = 'celsius',
+    pad_percents = 0,
+    short_units = true,
+    draw_graph_borders = true,
+    extra_newline = false,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    show_graph_range = false,
+    show_graph_scale = false,
+
+    color1 = '3584E4',			-- Adwaita Blue 3
+    color2 = '33D17A',			-- Adwaita Green 3
+    color3 = 'F6D32D',			-- Adwaita Yellow 3
+    color4 = 'FF7800',			-- Adwaita Orange 3
+    color5 = 'E01B24',			-- Adwaita Red 3
+    color6 = '9141AC',			-- Adwaita Purple 3
+    color7 = '986A44',			-- Adwaita Brown 3
+    color8 = 'DEDDDA',			-- Adwaita Light 3
+    color9 = '3D3846',			-- Adwaita Dark 3
+
+    default_color = '#ffffff',
+    default_outline_color = '#232323',
+    default_shade_color = '#2d2d2d',
 }
 
 conky.text = [[
-${color grey}Info:$color ${scroll 32 Conky $conky_version - $sysname $nodename $kernel $machine}
-$hr
-${color grey}Uptime:$color $uptime
-${color grey}Frequency (in MHz):$color $freq
-${color grey}Frequency (in GHz):$color $freq_g
-${color grey}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
-${color grey}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
-${color grey}CPU Usage:$color $cpu% ${cpubar 4}
-${color grey}Processes:$color $processes  ${color grey}Running:$color $running_processes
-$hr
-${color grey}File systems:
- / $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
-${color grey}Networking:
-Up:$color ${upspeed} ${color grey} - Down:$color ${downspeed}
-$hr
-${color grey}Name			  PID	 CPU%   MEM%
-${color lightgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
-${color lightgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
-${color lightgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
-${color lightgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+#${font Cantarell:size=28}${utime %H:%M:%S}${voffset -20}
+#${color8}${font Cantarell:size=12}${time %a %d %b %Y}$color
+
+${font Cantarell:bold:size=12}${color5}СИСТЕМА$color ${execi 86400 uname -o}
+${font Cantarell:size=10}${color8}${execi 86400 awk -F'=|"' '/PRETTY/{print $3}' /etc/os-release}
+${font Cantarell:size=10}${color8}Ядро: $color${sysname} ${kernel}
+${font Cantarell:size=10}${color8}Разрядность: $color${machine}
+
+${font Cantarell:bold:size=12}${color5}ПОЛЬЗОВАТЕЛИ$color ${execi 86400 uname -n}
+${font Cantarell:size=10}${color8}Количество: $color$user_number
+${font Cantarell:size=10}${color1}$user_names$color ${uptime_short}
+
+${font Cantarell:bold:size=12}${color5}СЕТЬ$color
+${font Cantarell:size=10}${color8}Локальный IP: $color${execi 86400 ifconfig | grep '192' | cut -d: -f2 | awk '{print $2}'}
+${font Cantarell:size=10}${color8}Маска IP: $color${execi 86400 ifconfig | grep '192' | cut -d: -f2 | awk '{print $6}'}
+
+${font Cantarell:bold:size=12}${color5}ПАМЯТЬ$color
+${font Cantarell:size=10}${color8}root: $color${fs_used /} > ${color8}${fs_size /}
+${fs_bar 8,160 /}
+${color8}home: $color${fs_used /home} > ${color8}${fs_size /home}
+${fs_bar 8,160 /home}
 ]]
+
