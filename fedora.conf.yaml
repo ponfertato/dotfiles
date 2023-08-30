@@ -33,9 +33,15 @@
     ## git
     ~/.gitconfig: git/gitconfig
     ## gnome
+    ### shell
+    ~/.local/share/gnome-shell/extensions: gnome/shell/extensions
     ### files
-    ~/.config/gtk-3.0/bookmarks: gnome/files/bookmarks
-    # ~/.config/gtk-4.0/servers: gnome/files/servers
+    ~/.config/gtk-3.0/bookmarks:
+        path: gnome/files/bookmarks
+        create: true
+    # ~/.config/gtk-4.0/servers:
+    #     path: gnome/files/servers
+    #     create: true
 
 - flatpak:
     ## base
@@ -55,6 +61,7 @@
     - md.obsidian.Obsidian #Obsidian
     ## office
     - org.onlyoffice.desktopeditors #ONLYOFFICE Desktop Editors
+    - org.gimp.GIMP #GIMP
     - com.github.jeromerobert.pdfarranger #PDF Arranger
     ## utilites
     - org.bleachbit.BleachBit #BleachBit
