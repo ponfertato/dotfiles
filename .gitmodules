@@ -11,6 +11,4 @@
 [submodule "nvim/nvchad"]
 	path = nvim/nvchad
 	url = https://github.com/NvChad/NvChad.git
-[submodule "zsh/plugins/wakatime"]
-	path = zsh/plugins/wakatime
-	url = https://github.com/wbingli/zsh-wakatime.git
+

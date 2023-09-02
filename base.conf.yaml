@@ -17,7 +17,6 @@
     ### bash
     ~/.bashrc: bash/bashrc
     ### zsh
-    ~/.oh-my-zsh/: zsh/ohmyzsh
     ~/.oh-my-zsh: zsh/ohmyzsh
     ~/.oh-my-zsh/custom/aliases.zsh: zsh/aliases.zsh
     ~/.oh-my-zsh/custom/functions.zsh: zsh/functions.zsh
