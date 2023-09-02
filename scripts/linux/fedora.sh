@@ -29,7 +29,8 @@ while true; do
 	echo "7. Установки для игр"
 	echo "8. Установки для ядра Fsync"
 	echo "9. Установки для ядра Xanmod"
-	echo "10. Установки для оболочки"
+  echo "10. Установки для удаленной работы"
+    echo "11. Установки для оболочки"
 	echo "0. Только применение конфига fedora.conf"
 
 	read -ra choices -p "Введите номера через пробел: "
@@ -74,7 +75,11 @@ while true; do
 				selected_options+=("Установки для ядра Xanmod")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/kernel/xanmod"
 				;;
-			10)
+      10)
+        selected_options+=("Установки для удаленной работы")
+        execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/remoteness"
+        ;;
+            11)
 				selected_options+=("Установки для оболочки")
 				execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/shell/zsh"
 				;;
