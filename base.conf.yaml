@@ -1,0 +1,36 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      strerr: true
+
+- clean: ['~']
+
+- link:
+    ## conky
+    ~/.conkyrc: conky/conkyrc
+    ## ssh
+    ~/.ssh/config: ssh/config
+    ## shell
+    ### bash
+    ~/.bashrc: bash/bashrc
+    ### zsh
+    ~/.oh-my-zsh: zsh/ohmyzsh
+    ~/.oh-my-zsh/custom/aliases.zsh: zsh/aliases.zsh
+    ~/.oh-my-zsh/custom/functions.zsh: zsh/functions.zsh
+    ~/.zshrc: zsh/zshrc
+    ## nvim
+    ~/.config/nvim: nvim/nvchad
+    ~/.config/nvim/lua/custom: nvim/nvchad_custom
+    ## git
+    ~/.gitconfig: git/gitconfig
+    ## gnome
+    ### shell
+    ~/.local/share/gnome-shell/extensions: gnome/shell/extensions
+    ### files
+    ~/.config/gtk-3.0/bookmarks: gnome/files/bookmarks
+    # ~/.config/gtk-4.0/servers: gnome/files/servers
+
+- shell: []

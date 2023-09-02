@@ -1,48 +1,3 @@
-- defaults:
-    link:
-      relink: true
-      create: true
-      force: true
-    shell:
-      strerr: true
-
-- clean: ['~']
-
-- link:
-    ## conky
-    ~/.conkyrc: conky/conkyrc
-    ## ssh
-    ~/.ssh/config:
-        path: ssh/config
-        create: true
-    ## shell
-    ### bash
-    ~/.bashrc: bash/bashrc
-    ### zsh
-    ~/.oh-my-zsh: zsh/ohmyzsh
-    ~/.oh-my-zsh/custom/aliases.zsh:
-        path: zsh/aliases.zsh
-        create: true
-    ~/.oh-my-zsh/custom/functions.zsh:
-        path: zsh/functions.zsh
-        create: true
-    ~/.zshrc: zsh/zshrc
-    ## nvim
-    ~/.config/nvim: nvim/nvchad
-    ~/.config/nvim/lua/custom: nvim/nvchad_custom
-    ## git
-    ~/.gitconfig: git/gitconfig
-    ## gnome
-    ### shell
-    ~/.local/share/gnome-shell/extensions: gnome/shell/extensions
-    ### files
-    ~/.config/gtk-3.0/bookmarks:
-        path: gnome/files/bookmarks
-        create: true
-    # ~/.config/gtk-4.0/servers:
-    #     path: gnome/files/servers
-    #     create: true
-
 - flatpak:
     ## base
     - com.mattjakeman.ExtensionManager #Extension Manager
@@ -78,7 +33,5 @@
     ### work
     ## communication
     # - com.mattermost.Desktop #Mattermost
+    # - com.skype.Client #Skype
     # - org.zulip.Zulip #Zulip
-
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]

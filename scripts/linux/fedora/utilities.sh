@@ -11,6 +11,7 @@ packages=(
 	nodejs
 	openssl
 	python3
+	sqlite3
 	unrar
 	wget
 )
