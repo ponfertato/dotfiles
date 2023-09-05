@@ -68,6 +68,11 @@ local plugins = {
       require "custom.configs.presence"
     end
   },
+
+  {
+    "wakatime/vim-wakatime",
+    event = "VeryLazy",
+  },
 }
 
 return plugins
