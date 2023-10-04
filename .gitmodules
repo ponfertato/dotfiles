@@ -17,3 +17,9 @@
 [submodule "dotbot-windows"]
 	path = dotbot-windows
 	url = https://github.com/kurtmckee/dotbot-windows.git
+[submodule "dotbot-firefox"]
+	path = dotbot-firefox
+	url = https://github.com/kurtmckee/dotbot-firefox.git
+[submodule "firefox/betterfox"]
+	path = firefox/betterfox
+	url = https://github.com/yokoffing/Betterfox.git
