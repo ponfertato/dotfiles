@@ -14,3 +14,6 @@
 [submodule "zsh/plugins/wakatime"]
 	path = zsh/plugins/wakatime
 	url = https://github.com/sobolevn/wakatime-zsh-plugin.git
+[submodule "dotbot-windows"]
+	path = dotbot-windows
+	url = https://github.com/kurtmckee/dotbot-windows.git
