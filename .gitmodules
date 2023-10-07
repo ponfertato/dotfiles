@@ -29,6 +29,3 @@
 [submodule "dotbot-scoop"]
 	path = dotbot-plugins/dotbot-scoop
 	url = https://github.com/JamJar00/dotbot-scoop.git
-[submodule "wakatime"]
-	path = wakatime
-	url = https://gist.github.com/ponfertato/9ca2359a55acd595941c3865f572d783
