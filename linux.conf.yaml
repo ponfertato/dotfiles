@@ -13,10 +13,10 @@
     ~/.conkyrc: conky/conkyrc
     ## ssh
     ~/.ssh/config: ssh/config
-    ## shell
-    ### bash
+    ### shell
+    ## bash
     ~/.bashrc: shell/bash/bashrc
-    ### zsh
+    ## zsh
     ~/.oh-my-zsh: shell/zsh/ohmyzsh
     ~/.oh-my-zsh/custom/aliases.zsh: shell/zsh/aliases.zsh
     ~/.oh-my-zsh/custom/functions.zsh: shell/zsh/functions.zsh
@@ -27,12 +27,15 @@
     ~/.config/nvim/lua/custom: nvim/nvchad_custom
     ## git
     ~/.gitconfig: git/gitconfig
-    ## gnome
-    ### shell
+    ### gnome
+    ## shell
     ~/.local/share/gnome-shell/extensions: gnome/shell/extensions
     ### files
+    ## bookmarks
     ~/.config/gtk-3.0/bookmarks: gnome/files/bookmarks
     # ~/.config/gtk-4.0/servers: gnome/files/servers
+    ## wakatime
+    ~/.wakatime.cfg: wakatime/.wakatime.cfg
 
 - flatpak:
     ## base
