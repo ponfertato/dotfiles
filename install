@@ -2,14 +2,14 @@
 
 set -e
 
-CONFIG="base"
+CONFIG="linux"
 SUFFIX=".conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-FLATPAK_PLUGIN="dotbot-flathub"
+FLATPAK_PLUGIN="dotbot-plugins/dotbot-flathub"
 
 sudo -S -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -26,21 +26,21 @@ case $ID in
     arch)
         echo "Arch"
         . "${BASEDIR}/scripts/linux/${ID}.sh"
-        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}"  --plugin-dir "${FLATPAK_PLUGIN}" -c "${ID}${SUFFIX}" "${@}"
-        ;;
+        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir "${FLATPAK_PLUGIN}" -c "${ID}${SUFFIX}" "${@}"
+    ;;
     debian)
         echo "Debian"
         . "${BASEDIR}/scripts/linux/${ID}.sh"
-        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}"  --plugin-dir "${FLATPAK_PLUGIN}" -c "${ID}${SUFFIX}" "${@}"
-        ;;
+        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir "${FLATPAK_PLUGIN}" -c "${ID}${SUFFIX}" "${@}"
+    ;;
     fedora)
         echo "Fedora"
         . "${BASEDIR}/scripts/linux/${ID}.sh"
-        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}"  --plugin-dir "${FLATPAK_PLUGIN}" -c "${ID}${SUFFIX}" "${@}"
-        ;;
+        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir "${FLATPAK_PLUGIN}" -c "${ID}${SUFFIX}" "${@}"
+    ;;
     *)
         echo "unknown distro ID: $ID, not doing anything special"
-        ;;
+    ;;
 esac
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}${SUFFIX}" "${@}"
