@@ -13,6 +13,7 @@
     ~/.ssh/config: ssh/config
     ### shell
     ## powershell
+    ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json: shell/powershell/settings.json
     ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1: shell/powershell/Microsoft.PowerShell_profile.ps1
     ~/Documents/PowerShell/powershell.config.json: shell/powershell/powershell.config.json
     ~/Documents/PowerShell/Modules: shell/powershell/modules
@@ -24,14 +25,16 @@
     ~/.wslconfig: wsl/.wslconfig
 
 - scoop:
-    buckets:
-      - extras
-      - name: nerd-fonts
-        repo: https://github.com/matthewjberger/scoop-nerd-fonts
-      - name: oh-my-posh
-        repo: https://github.com/JanDeDobbeleer/oh-my-posh
-    # apps:
-    #   - firefox
+  buckets:
+    - extras
+    - name: nerd-fonts
+      repo: https://github.com/matthewjberger/scoop-nerd-fonts
+    - name: oh-my-posh
+      repo: https://github.com/JanDeDobbeleer/oh-my-posh
+  apps:
+    - nerd-fonts
+    - oh-my-posh
+    - neovim
 
-# - firefox:
-#     user.js: firefox/betterfox/user.js
+- firefox:
+    user.js: firefox/betterfox/user.js
