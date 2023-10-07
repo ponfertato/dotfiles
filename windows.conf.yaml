@@ -24,17 +24,5 @@
     ## wsl
     ~/.wslconfig: wsl/.wslconfig
 
-- scoop:
-  buckets:
-    - extras
-    - name: nerd-fonts
-      repo: https://github.com/matthewjberger/scoop-nerd-fonts
-    - name: oh-my-posh
-      repo: https://github.com/JanDeDobbeleer/oh-my-posh
-  apps:
-    - nerd-fonts
-    - oh-my-posh
-    - neovim
-
 - firefox:
-    user.js: firefox/betterfox/user.js
+    user.js: browser/firefox/user.js
