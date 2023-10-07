@@ -15,13 +15,13 @@
     ~/.ssh/config: ssh/config
     ## shell
     ### bash
-    ~/.bashrc: bash/bashrc
+    ~/.bashrc: shell/bash/bashrc
     ### zsh
-    ~/.oh-my-zsh: zsh/ohmyzsh
-    ~/.oh-my-zsh/custom/aliases.zsh: zsh/aliases.zsh
-    ~/.oh-my-zsh/custom/functions.zsh: zsh/functions.zsh
-    ~/.oh-my-zsh/custom/plugins: zsh/plugins
-    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh: shell/zsh/ohmyzsh
+    ~/.oh-my-zsh/custom/aliases.zsh: shell/zsh/aliases.zsh
+    ~/.oh-my-zsh/custom/functions.zsh: shell/zsh/functions.zsh
+    ~/.oh-my-zsh/custom/plugins: shell/zsh/plugins
+    ~/.zshrc: shell/zsh/zshrc
     ## nvim
     ~/.config/nvim: nvim/nvchad
     ~/.config/nvim/lua/custom: nvim/nvchad_custom
