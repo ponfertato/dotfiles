@@ -4,23 +4,20 @@ $CONFIG = "windows"
 $SUFFIX = ".conf.yaml"
 $DOTBOT_DIR = "dotbot"
 
+$BASEDIR = "$PSScriptRoot"
 $DOTBOT_BIN = "bin/dotbot"
-$BASEDIR = $PSScriptRoot
+$DOTBOT_PLUGIN = "dotbot-plugins"
 
-$FIREFOX_PLUGIN = "dotbot-plugins/dotbot-firefox"
-$SCOOP_PLUGIN = "dotbot-plugins/dotbot-scoop"
-$WINDOWS_PLUGIN = "dotbot-plugins/dotbot-windows"
+Set-Location "$BASEDIR"
 
-Set-Location $BASEDIR
-
-git -C $DOTBOT_DIR submodule sync --quiet --recursive
-git submodule update --init --recursive $DOTBOT_DIR
+git -C "$DOTBOT_DIR" submodule sync --quiet --recursive
+git submodule update --init --recursive "$DOTBOT_DIR"
 
 foreach ($PYTHON in ('python', 'python3', 'python2')) {
 	if (& { $ErrorActionPreference = "SilentlyContinue"
 			![string]::IsNullOrEmpty((&$PYTHON -V))
 			$ErrorActionPreference = "Stop" }) {
-		&$PYTHON $(Join-Path $BASEDIR -ChildPath $DOTBOT_DIR | Join-Path -ChildPath $DOTBOT_BIN) -d $BASEDIR --plugin-dir $FIREFOX_PLUGIN, $SCOOP_PLUGIN, $WINDOWS_PLUGIN -c $CONFIG$SUFFIX $Args
+		&$PYTHON $(Join-Path "$BASEDIR" -ChildPath "$DOTBOT_DIR" | Join-Path -ChildPath "$DOTBOT_BIN") -d "$BASEDIR" --plugin-dir $(Join-Path "$BASEDIR" -ChildPath "$DOTBOT_PLUGIN") -c "$CONFIG$SUFFIX" "$Args"
 		return
 	}
 }
