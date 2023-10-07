@@ -17,7 +17,7 @@ foreach ($PYTHON in ('python', 'python3', 'python2')) {
 	if (& { $ErrorActionPreference = "SilentlyContinue"
 			![string]::IsNullOrEmpty((&$PYTHON -V))
 			$ErrorActionPreference = "Stop" }) {
-		&$PYTHON $(Join-Path "$BASEDIR" -ChildPath "$DOTBOT_DIR" | Join-Path -ChildPath "$DOTBOT_BIN") -d "$BASEDIR" --plugin-dir $(Join-Path "$BASEDIR" -ChildPath "$DOTBOT_PLUGIN") -c "$CONFIG$SUFFIX" "$Args"
+		&$PYTHON $(Join-Path "$BASEDIR" -ChildPath "$DOTBOT_DIR" | Join-Path -ChildPath "$DOTBOT_BIN") -d "$BASEDIR" --plugin-dir $DOTBOT_PLUGIN/* -c "$CONFIG$SUFFIX" "$Args"
 		return
 	}
 }
