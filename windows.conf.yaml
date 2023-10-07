@@ -1,0 +1,37 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+    shell:
+      strerr: true
+
+- clean: ['~']
+
+- link:
+    ## ssh
+    ~/.ssh/config: ssh/config
+    ### shell
+    ## powershell
+    ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1: shell/powershell/Microsoft.PowerShell_profile.ps1
+    ~/Documents/PowerShell/powershell.config.json: shell/powershell/powershell.config.json
+    ~/Documents/PowerShell/Modules: shell/powershell/modules
+    ## git
+    ~/.gitconfig: git/gitconfig
+    ## wakatime
+    ~/.wakatime.cfg: wakatime/.wakatime.cfg
+    ## wsl
+    ~/.wslconfig: wsl/.wslconfig
+
+- scoop:
+    buckets:
+      - extras
+      - name: nerd-fonts
+        repo: https://github.com/matthewjberger/scoop-nerd-fonts
+      - name: oh-my-posh
+        repo: https://github.com/JanDeDobbeleer/oh-my-posh
+    # apps:
+    #   - firefox
+
+# - firefox:
+#     user.js: firefox/betterfox/user.js
