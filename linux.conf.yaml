@@ -34,4 +34,42 @@
     ~/.config/gtk-3.0/bookmarks: gnome/files/bookmarks
     # ~/.config/gtk-4.0/servers: gnome/files/servers
 
+- flatpak:
+    ## base
+    - com.mattjakeman.ExtensionManager #Extension Manager
+    - com.github.tchx84.Flatseal #Flatseal
+    - org.mozilla.Thunderbird #Thunderbird
+    # - org.gnome.Extensions #Extensions
+    ## communication
+    - com.obsproject.Studio #OBS Studio
+    - io.github.kotatogram #Kotatogram Desktop
+    - xyz.armcord.ArmCord #ArmCord
+    # - com.discordapp.Discord #Discord
+    # - org.telegram.desktop #Telegram Desktop
+    ## develop
+    - com.github.Murmele.Gittyup #Gittyup
+    - dev.pulsar_edit.Pulsar #Pulsar
+    - md.obsidian.Obsidian #Obsidian
+    ## office
+    - org.onlyoffice.desktopeditors #ONLYOFFICE Desktop Editors
+    - org.gimp.GIMP #GIMP
+    - com.github.jeromerobert.pdfarranger #PDF Arranger
+    ## utilites
+    - org.bleachbit.BleachBit #BleachBit
+    - org.keepassxc.KeePassXC #KeePassXC
+    - org.qbittorrent.qBittorrent #qBittorrent
+    - org.remmina.Remmina #Remmina
+    ### home
+    ## games
+    # - com.heroicgameslauncher.hgl #Heroic Games Launcher
+    # - com.valvesoftware.Steam #Steam
+    # - com.vysp3r.ProtonPlus #ProtonPlus
+    # - io.github.Foldex.AdwSteamGtk #AdwSteamGtk
+    # - org.prismlauncher.PrismLauncher #Prism Launcher
+    ### work
+    ## communication
+    # - com.mattermost.Desktop #Mattermost
+    # - com.skype.Client #Skype
+    # - org.zulip.Zulip #Zulip
+
 - shell: []
