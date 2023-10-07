@@ -28,9 +28,8 @@
     ## git
     ~/.gitconfig: git/gitconfig
     ### gnome
-    ## shell
-    ~/.local/share/gnome-shell/extensions: gnome/shell/extensions
-    ### files
+    ## extensions
+    ~/.local/share/gnome-shell/extensions: gnome/extensions
     ## bookmarks
     ~/.config/gtk-3.0/bookmarks: gnome/files/bookmarks
     # ~/.config/gtk-4.0/servers: gnome/files/servers
