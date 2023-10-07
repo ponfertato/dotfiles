@@ -32,3 +32,6 @@
 [submodule "wakatime"]
 	path = wakatime
 	url = https://gist.github.com/ponfertato/9ca2359a55acd595941c3865f572d783
+[submodule "dotbot-plugins/dotbot-ifhostname"]
+	path = dotbot-plugins/dotbot-ifhostname
+	url = https://github.com/johnlettman/dotbot-ifhostname.git
