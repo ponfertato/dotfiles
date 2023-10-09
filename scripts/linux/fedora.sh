@@ -30,7 +30,7 @@ while true; do
     echo "8. Установки для ядра Fsync"
     echo "9. Установки для ядра Xanmod"
     echo "10. Установки для удаленной работы"
-    echo "11. Установки для оболочки"
+    echo "11. Установки для оболочки Zsh"
     echo "0. Только применение конфига fedora.conf"
 
     read -ra choices -p "Введите номера через пробел: "
@@ -80,7 +80,7 @@ while true; do
                 execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/remoteness"
             ;;
             11)
-                selected_options+=("Установки для оболочки")
+                selected_options+=("Установки для оболочки Zsh")
                 execute_scripts_in_folder "${BASEDIR}/scripts/linux/fedora/shell/zsh"
             ;;
             0)
