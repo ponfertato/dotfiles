@@ -3,6 +3,6 @@
 print_block "Fedora - Games/Mangohud"
 
 packages=(
-	mangohud
+    mangohud
 )
 install_or_update_packages

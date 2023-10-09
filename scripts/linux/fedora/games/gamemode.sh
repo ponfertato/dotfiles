@@ -3,6 +3,6 @@
 print_block "Fedora - Games/Gamemode"
 
 packages=(
-	gamemode
+    gamemode
 )
 install_or_update_packages

@@ -3,6 +3,6 @@
 print_block "Fedora - Containerization/Podman"
 
 packages=(
-	podman
+    podman
 )
 install_or_update_packages

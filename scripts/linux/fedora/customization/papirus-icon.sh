@@ -3,7 +3,7 @@
 print_block "Fedora - Customization/Papirus Icon"
 
 packages=(
-	papirus-icon-theme
+    papirus-icon-theme
 )
 install_or_update_packages
 
