@@ -23,3 +23,6 @@
 [submodule "wakatime"]
 	path = wakatime
 	url = https://gist.github.com/ponfertato/9ca2359a55acd595941c3865f572d783
+[submodule "shell/powershell"]
+	path = shell/powershell
+	url = https://github.com/ponfertato/PowerShell-Stuff.git
