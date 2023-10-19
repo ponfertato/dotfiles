@@ -20,18 +20,9 @@
 [submodule "dotbot-firefox"]
 	path = dotbot-plugins/dotbot-firefox
 	url = https://github.com/kurtmckee/dotbot-firefox.git
-[submodule "firefox/betterfox"]
-	path = firefox/betterfox
-	url = https://github.com/yokoffing/Betterfox.git
-[submodule "dotbot-scoop"]
-	path = dotbot-plugins/dotbot-scoop
-	url = https://github.com/JamJar00/dotbot-scoop.git
 [submodule "wakatime"]
 	path = wakatime
 	url = https://gist.github.com/ponfertato/9ca2359a55acd595941c3865f572d783
-[submodule "dotbot-plugins/dotbot-ifhostname"]
-	path = dotbot-plugins/dotbot-ifhostname
-	url = https://github.com/johnlettman/dotbot-ifhostname.git
 [submodule "shell/powershell"]
 	path = shell/powershell
 	url = https://github.com/ponfertato/PowerShell-Stuff.git
