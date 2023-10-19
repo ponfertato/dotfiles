@@ -23,9 +23,6 @@
 [submodule "firefox/betterfox"]
 	path = firefox/betterfox
 	url = https://github.com/yokoffing/Betterfox.git
-[submodule "powershell/modules/discordrpc"]
-	path = shell/powershell/modules/discordrpc
-	url = https://github.com/potatoqualitee/discordrpc.git
 [submodule "dotbot-scoop"]
 	path = dotbot-plugins/dotbot-scoop
 	url = https://github.com/JamJar00/dotbot-scoop.git
@@ -35,3 +32,6 @@
 [submodule "dotbot-plugins/dotbot-ifhostname"]
 	path = dotbot-plugins/dotbot-ifhostname
 	url = https://github.com/johnlettman/dotbot-ifhostname.git
+[submodule "shell/powershell"]
+	path = shell/powershell
+	url = https://github.com/ponfertato/PowerShell-Stuff.git
