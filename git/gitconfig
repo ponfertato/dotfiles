@@ -10,3 +10,5 @@
 	insteadOf = git://github.com/
 [gui]
 	recentrepo = /home/ponfertato/Документы/GitHub/dotfiles
+[core]
+	editor = \"C:\\Users\\ponfertato\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
