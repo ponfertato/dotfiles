@@ -24,7 +24,7 @@ if ($firstTwoDigits -eq "19") {
 }
 elseif ($firstTwoDigits -eq "22") {
 	Write-Host "Windows 11"
-	. "${BASEDIR}/scripts/windows/eleven.ps1"
+	# . "${BASEDIR}/scripts/windows/eleven.ps1"
 	&$PYTHON $(Join-Path "$BASEDIR" -ChildPath "$DOTBOT_DIR" | Join-Path -ChildPath "$DOTBOT_BIN") -d "$BASEDIR" --plugin-dir $DOTBOT_PLUGIN/* -c "$CONFIG$SUFFIX" "$Args"
 }
 else {
