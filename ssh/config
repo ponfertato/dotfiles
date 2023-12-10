@@ -3,6 +3,11 @@ Host "Local Server"
   User SCUD
   Port 22
 
+Host "Potato Server"
+  HostName 62.113.110.82
+  User root
+  Port 22
+
 Host "LasP Server"
   HostName laspegasus.ru
   User ponfertato

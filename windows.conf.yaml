@@ -17,12 +17,27 @@
     ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1: shell/powershell/Microsoft.PowerShell_profile.ps1
     ~/Documents/PowerShell/powershell.config.json: shell/powershell/powershell.config.json
     ~/Documents/PowerShell/Modules: shell/powershell/modules
+    ## nvim
+    # ~/.config/nvim: nvim/nvchad
+    # ~/.config/nvim/lua/custom: nvim/nvchad_custom
     ## git
     ~/.gitconfig: git/gitconfig
     ## wakatime
     ~/.wakatime.cfg: wakatime/.wakatime.cfg
     ## wsl
     ~/.wslconfig: wsl/.wslconfig
+
+- scoop:
+    buckets:
+      - main
+      - nerd-fonts
+    apps:
+      - neovim
+      - JetBrainsMono-NF-Mono
+
+# - winget:
+#     ## base
+#     - com.mattjakeman.ExtensionManager #Extension Manager
 
 - firefox:
     user.js: browser/firefox/user.js
