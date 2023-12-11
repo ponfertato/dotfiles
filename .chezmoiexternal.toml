@@ -1,0 +1,4 @@
+["./Documents/PowerShell"]
+	type = "git-repo"
+	url = "https://github.com/ponfertato/PowerShell-Stuff.git"
+	refreshPeriod = "168h"

@@ -8,3 +8,17 @@
 	email = ponfertato@ya.ru
 [url "git@github.com:"]
 	insteadOf = git://github.com/
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
+	autosquash = true
+	updateRefs = true
+[status]
+	submoduleSummary = true
+[color]
+	ui = auto

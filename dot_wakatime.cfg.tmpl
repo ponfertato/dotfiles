@@ -1,0 +1,3 @@
+[settings]
+api_key = {{ $wakatime_api_key := promptStringOnce . "wakatime_api_key" "Waka API Key" }}
+hostname = {{ $wakatime_hostname := promptStringOnce . "wakatime_hostname" "Waka Host Name" }}

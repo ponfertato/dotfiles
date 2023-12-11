@@ -1,0 +1,30 @@
+{{- $email := promptStringOnce . "email" "Email Address" -}}
+
+{{ if eq .osid "darwin" }}
+# macOS-specific code
+{{ else if eq .osid "linux-debian" }}
+# Debian-specific code
+{{ else if eq .osid "linux-fedora" }}
+# Fedora-specific code
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+# WSL-specific code
+{{   end }}
+{{ end }}
+
+[interpreters.ps1]
+    {{- if eq .chezmoi.os "windows" }}
+    command = "C:/Program Files/PowerShell/7/pwsh.exe"
+    {{- else }}
+    command = "/usr/bin/pwsh"
+    {{- end }}
+    args = ["-NoLogo", "-NoProfile"]
+
+[git]
+    autoCommit = true
+    #autoPush = true
+    commitMessageTemplateFile = ".commit_message.tmpl"
+[data]
+    email = {{ $email | quote }}
