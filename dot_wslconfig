@@ -8,18 +8,4 @@ memory               = 4GB
 processors           = 2
 
 # Turns on output console showing contents of dmesg when opening a WSL 2 distro for debugging
-debugConsole        = true
-
-# Enable systemd on WSL 2 distro.
-[boot]
-systemd             = true
-
-[automount]
-enabled             = true
-crossDistro         = true
-root                = /
-options             = metadata
-
-[interop]
-enabled             = true
-appendWindowsPath   = true
+debugConsole        = false
