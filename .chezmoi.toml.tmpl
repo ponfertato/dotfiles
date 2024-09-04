@@ -1,3 +1,4 @@
+progress = true
 [interpreters.ps1]
     {{- if eq .chezmoi.os "windows" }}
     command = "C:/Program Files/PowerShell/7/pwsh.exe"
@@ -10,3 +11,10 @@
     autoCommit = true
     #autoPush = true
     commitMessageTemplateFile = ".commit_message.tmpl"
+[edit]
+    {{- if eq .chezmoi.os "windows" }}
+    command = "codium.cmd"
+    {{- else }}
+    command = "nano"
+    {{- end }}
+    args = ["--wait"]

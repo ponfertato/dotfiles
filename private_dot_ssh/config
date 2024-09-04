@@ -1,0 +1,14 @@
+Host "SCUD"
+  HostName 192.168.215.228
+  User Scud
+  Port 22
+
+Host "SCUD(zerotier)"
+  HostName 172.30.0.1
+  User Scud
+  Port 2222
+
+Host "potatoServer(zerotier)"
+  HostName 192.168.192.120
+  User ponfertato
+  Port 22

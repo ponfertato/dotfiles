@@ -1,9 +1,0 @@
-Host "SCUD Server"
-  HostName 192.168.215.228
-  User SCUD
-  Port 22
-
-Host "Potato Server"
-  HostName 62.113.110.82
-  User root
-  Port 22
